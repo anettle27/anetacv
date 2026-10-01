@@ -1,8 +1,9 @@
 # Aneta Vostra — CV
 
-A simple static web CV. No build step — open `index.html` in a browser.
+A playful static web resume with tabs (Home, Education, Experience, Projects). No build step.
 
-- `index.html` — content (replace the placeholder text)
-- `styles.css` — styling, with automatic dark mode and print styles
+- `index.html` — content (replace the placeholder text; the rotating home-page lines are in the `phrases` list)
+- `styles.css` — styling and colour palette (variables at the top)
+- `script.js` — switches tabs based on the URL (`#education`, `#projects`, …)
 
-Can be hosted for free with GitHub Pages (Settings → Pages → deploy from `main`).
+Every push to `main` deploys to https://aneta.vostry.org via Vercel.

@@ -3,82 +3,472 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aneta Vostra — CV</title>
-  <meta name="description" content="Curriculum vitae of Aneta Vostra">
+  <title>Aneta Vostrá</title>
+  <meta name="description" content="Aneta Vostrá, student at the International School of Prague. Robotics, economics and politics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="cv">
-    <header class="hero">
-      <h1>Aneta Vostra</h1>
-      <p class="role">Your Job Title</p>
-      <ul class="contact">
-        <li><a href="mailto:you@example.com">you@example.com</a></li>
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        <li><a href="https://github.com/">GitHub</a></li>
-        <li>City, Country</li>
+  <header class="topbar">
+    <a href="#home" class="brand">Aneta<span class="dot">.</span></a>
+
+    <nav class="menu" aria-label="Main">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">
+        <span class="menu-icon" aria-hidden="true"></span> Menu
+      </button>
+      <ul id="menu-list">
+        <li><a href="#home" data-tab="home">Home</a></li>
+        <li><a href="#education" data-tab="education">Education</a></li>
+        <li><a href="#experience" data-tab="experience">Experience</a></li>
+        <li><a href="#projects" data-tab="projects">Projects</a></li>
       </ul>
-    </header>
+    </nav>
 
-    <section>
-      <h2>About</h2>
-      <p>A short summary of who you are, what you do, and what you're looking for. Two or three sentences is plenty.</p>
+    <div class="lang">
+      <button class="lang-toggle" aria-expanded="false" aria-controls="lang-list" aria-label="Language: English">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        <span class="lang-label">English</span>
+        <span class="caret-down" aria-hidden="true"></span>
+      </button>
+      <ul id="lang-list" class="lang-list">
+        <li><button aria-current="true" lang="en">English</button></li>
+        <li><button disabled lang="cs">Čeština <small>brzy</small></button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="page page-home" data-page="home">
+      <h1 class="name">Aneta Vostrá</h1>
+      <p class="rotator" aria-hidden="true"><span class="rotator-text"></span><span class="type-caret"></span></p>
+      <!-- Edit these lines to change the rotating subtext on the home page -->
+      <ul class="phrases visually-hidden">
+        <li>robotics team captain.</li>
+        <li>economics and politics enthusiast.</li>
+        <li>debater and public speaker.</li>
+        <li>tech tinkerer.</li>
+      </ul>
+      <div class="home-links">
+        <a href="https://www.linkedin.com/in/anetav/">LinkedIn</a>
+        <a href="https://github.com/anettle27">GitHub</a>
+      </div>
     </section>
 
-    <section>
-      <h2>Experience</h2>
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Job Title · Company Name</h3>
-          <span class="dates">2023 — Present</span>
-        </div>
-        <ul>
-          <li>Key achievement or responsibility, ideally with a measurable result.</li>
-          <li>Another accomplishment worth highlighting.</li>
-        </ul>
-      </article>
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Job Title · Company Name</h3>
-          <span class="dates">2020 — 2023</span>
-        </div>
-        <ul>
-          <li>Key achievement or responsibility.</li>
-          <li>Another accomplishment worth highlighting.</li>
-        </ul>
-      </article>
-    </section>
 
-    <section>
-      <h2>Education</h2>
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Degree · University Name</h3>
-          <span class="dates">2016 — 2020</span>
-        </div>
-        <p>Relevant focus, thesis, or honours.</p>
-      </article>
-    </section>
+    <!-- EDUCATION -->
+    <section class="page" data-page="education" hidden>
+      <header class="page-head">
+        <p class="eyebrow">01 / Education</p>
+        <h1>Education</h1>
+        <p class="lead">IB student at the International School of Prague with a passion for the social sciences, especially economics, finance and foreign relations, and a soft spot for engineering.</p>
+      </header>
 
-    <section>
-      <h2>Skills</h2>
-      <ul class="tags">
-        <li>Skill one</li>
-        <li>Skill two</li>
-        <li>Skill three</li>
-        <li>Skill four</li>
-        <li>Skill five</li>
+      <ol class="timeline">
+        <li class="card">
+          <span class="badge">2021 – 2028</span>
+          <h3>International School of Prague</h3>
+          <p class="meta">IB Diploma Programme · Prague</p>
+          <p>I've been at the International School of Prague since 2021 and am now in the IB Diploma Programme. My subject choices lean towards the social sciences, with economics and global politics at Higher Level, balanced with maths, languages and science.</p>
+          <dl class="subjects">
+            <div><dt>Higher Level</dt><dd>Mathematics: Analysis &amp; Approaches · Economics · Global Politics</dd></div>
+            <div><dt>Standard Level</dt><dd>Language &amp; Literature · Spanish · Biology</dd></div>
+          </dl>
+        </li>
+        <li class="card">
+          <span class="badge">Online courses</span>
+          <h3>Global Online Academy</h3>
+          <p class="meta">Semester courses taken alongside my school studies</p>
+          <p>Global Online Academy runs online courses for students from schools around the world. I've taken three courses with them to go deeper into subjects my school timetable couldn't fit.</p>
+          <ul class="roles">
+            <li><div><strong>Problem Solving with Engineering and Design</strong><span>Aug – Dec 2025</span></div>
+              <p>A semester of working through the engineering design process, from defining a real problem to brainstorming, prototyping and testing solutions. It tied in closely with my work as lead designer on the robotics team.</p></li>
+            <li><div><strong>Precalculus</strong></div>
+              <p>An online precalculus course covering functions, trigonometry and the other foundations needed for calculus. It gave me a strong base for IB Mathematics: Analysis &amp; Approaches at Higher Level.</p></li>
+            <li><div><strong>Biochemistry</strong></div>
+              <p>An introduction to the chemistry of living things, looking at the molecules that make life work, such as proteins, enzymes and DNA. It connected my interest in biology with my interest in how technology can support the human body.</p></li>
+          </ul>
+        </li>
+        <li class="card">
+          <span class="badge">Jul 2025</span>
+          <h3>Stanford Pre-Collegiate Studies</h3>
+          <p class="meta">Biomedical Engineering · Remote</p>
+          <p>A two-week intensive course on the principles and applications of biomedical engineering. We studied how the body's organs work and the technologies used to support them, then brainstormed possible new solutions. I finished with a research presentation on prosthetics: their history, how they're used today and where the technology is heading. The course cemented my passion for biotechnology and robotics.</p>
+        </li>
+        <li class="card">
+          <span class="badge">Jul 2024</span>
+          <h3>Oxford Royale</h3>
+          <p class="meta">Engineering &amp; Technology · Summer programme</p>
+          <p>A two-week summer programme focused on engineering and technology, especially mechanical and structural engineering and how it's used in the real world. We learned through hands-on projects and daily lectures. I came away with much stronger maths, physics and design skills.</p>
+        </li>
+      </ol>
+
+      <h2 class="section-title">Honours &amp; awards</h2>
+      <ul class="awards">
+        <li>
+          <span class="award-date">2025 – 2026</span>
+          <strong>Duke of Edinburgh International Award</strong>
+          <ul class="award-items">
+            <li><b>Silver Award</b><span>Aug 2026</span></li>
+            <li><b>Bronze Award</b><span>Sep 2025</span></li>
+          </ul>
+        </li>
+        <li>
+          <span class="award-date">2024 – 2026</span>
+          <strong>University of Waterloo Maths Contests</strong>
+          <span>Certificate of Distinction (top 25%) three years running</span>
+          <ul class="award-items">
+            <li><b>Cayley Contest, Grade 10</b><span>Apr 2026</span></li>
+            <li><b>Pascal Contest, Grade 9</b><span>May 2025</span></li>
+            <li><b>Pascal Contest, Grade 8</b><span>May 2024</span></li>
+          </ul>
+        </li>
+        <li>
+          <span class="award-date">Dec 2024 · Warsaw</span>
+          <strong>CEESA Speech &amp; Debate</strong>
+          <ul class="award-items">
+            <li><b>3rd Place, Debate</b><span>Should prisoners be allowed to vote?</span></li>
+            <li><b>Top 6, Original Oratory</b><span>Why friendships matter for youth</span></li>
+          </ul>
+        </li>
+        <li>
+          <span class="award-date">Mar 2025</span>
+          <strong>Finalist, National Sci-Tech Challenge</strong>
+          <span>JA Czech &amp; ExxonMobil. Creating sustainable solutions to everyday and unconventional problems.</span>
+        </li>
+        <li>
+          <span class="award-date">Apr 2024</span>
+          <strong>Lobkowicz Curator Certificate</strong>
+          <span>House of Lobkowicz, Curator Challenge 2024</span>
+        </li>
+      </ul>
+
+      <h2 class="section-title">Languages</h2>
+      <ul class="langs">
+        <li><strong>Czech</strong><span>Native</span></li>
+        <li><strong>English</strong><span>Native</span></li>
+        <li><strong>Spanish</strong><span>Limited working</span></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Languages</h2>
-      <p>Czech (native) · English (fluent)</p>
+
+    <!-- EXPERIENCE -->
+    <section class="page" data-page="experience" hidden>
+      <header class="page-head">
+        <p class="eyebrow">02 / Experience</p>
+        <h1>Experience</h1>
+        <p class="lead">Robotics captain, community organiser, debater and athlete. Here's what I've been up to.</p>
+      </header>
+
+      <h2 class="section-title">Robotics</h2>
+      <div class="jobs">
+        <article class="card job captain">
+          <div class="captain-banner">
+            <span class="captain-star" aria-hidden="true">★</span>
+            <span>Team Captain</span>
+            <span class="captain-since">since Mar 2026</span>
+          </div>
+          <div class="job-head">
+            <h3>FalconTech #11041</h3>
+            <span class="badge">Oct 2024 – Now</span>
+          </div>
+          <p class="meta">Upper School Robotics Team · International School of Prague</p>
+          <ul class="stats">
+            <li><strong>16</strong><span>students led</span></li>
+            <li><strong>6</strong><span>projects at once</span></li>
+            <li><strong>4</strong><span>competitions</span></li>
+          </ul>
+          <ul class="roles">
+            <li><div><strong>Captain</strong><span>Mar 2026 – Now</span></div>
+              <p>I lead a team of 16 students working on 6 projects at the same time. As captain it's my job to instruct, direct and lead the team, while still working on the robot's specifications and design. I'm also helping other ISP students get into robotics and improving how the school's robotics club is structured.</p></li>
+            <li><div><strong>Member &amp; Lead Designer</strong><span>Oct 2024 – Now</span></div>
+              <p>I joined the Upper School robotics team in October 2024 and compete in both VEX and FIRST Tech Challenge. As lead designer I focus on the mechanical engineering side, turning ideas into robot designs the team can build.</p></li>
+          </ul>
+          <h4 class="sub-title">Competitions</h4>
+          <ul class="roles">
+            <li><div><strong>2026 Slovakia Qualifiers</strong><span>Mar – May 2026</span></div>
+              <p>Competed for Falcon Tech #11041 at the Slovakia qualifying tournament. We finished 4th out of 16 teams in the qualification rankings.</p></li>
+            <li><div><strong>FIRST Tech Challenge Benelux</strong><span>Sep – Dec 2025</span></div>
+              <p>Represented Falcon Tech #11041 in the FIRST Tech Challenge Benelux season. We designed, built and programmed a robot for that season's game.</p></li>
+            <li><div><strong>2025 Slovakia Qualifiers</strong><span>Mar – Jun 2025</span></div>
+              <p>Competed for Falcon Tech #11041 at the Slovakia qualifying tournament. We finished 2nd out of 12 teams in the qualification rankings.</p></li>
+            <li><div><strong>VEX Robotics: CEESA High Stakes</strong><span>Sep 2024 – Mar 2025</span></div>
+              <p>A season of VEX Robotics built around the "High Stakes" game. We represented ISP at the CEESA robotics competition.</p></li>
+          </ul>
+        </article>
+
+        <article class="card job a-mauve">
+          <div class="job-head">
+            <h3>National Team: FIRST Global Challenge</h3>
+            <span class="badge">Jun 2025 – Now</span>
+          </div>
+          <p class="meta">Representing the Czech Republic</p>
+          <p>The FIRST Global Challenge is an international robotics competition where each country sends a single national team. I'm one of the few students who got to represent Czechia.</p>
+          <ul class="roles">
+            <li><div><strong>2026 FIRST Global Challenge</strong><span>Jun 2026 – Now · Incheon, South Korea</span></div>
+              <p>Back on the national team for a second season, this time competing in Incheon, South Korea. Once again we're designing, building and programming a robot for this year's challenge.</p></li>
+            <li><div><strong>2025 FIRST Global Challenge</strong><span>Jun 2025 – Jun 2026 · Panama City, Panama</span></div>
+              <p>Our team engineered, built and programmed a robot to complete the competition's tasks. We competed against national teams from 180 other countries.</p></li>
+          </ul>
+        </article>
+      </div>
+
+      <h2 class="section-title">Leadership &amp; community</h2>
+      <div class="jobs">
+        <article class="card job a-sun">
+          <div class="job-head">
+            <h3>Co-organiser, Campfire Prague</h3>
+            <span class="badge">Jan – Mar 2026</span>
+          </div>
+          <p class="meta">Hack Club</p>
+          <p>I co-organised Campfire Prague, a 48-hour game jam for teens powered by Hack Club, a nonprofit for teen coders and electronics makers. Teens from around Prague came together to make and ship their own games, with prizes, food and merch along the way. My focus was team management and leadership, helping plan and run the event.</p>
+        </article>
+
+        <article class="card job a-mauve">
+          <div class="job-head">
+            <h3>Community Service</h3>
+            <span class="badge">Aug 2021 – Now</span>
+          </div>
+          <p class="meta">International School of Prague</p>
+          <ul class="roles">
+            <li><div><strong>Treasurer &amp; Leader, Upper School Community Service</strong><span>May 2025 – Aug 2026</span></div>
+              <p>I led the Upper School community service programme as both leader and treasurer. I oversaw 5 divisions, coordinating, planning and running their projects. I was also the link between students, the school administration and our partner charities.</p></li>
+            <li><div><strong>Member, Community Service Club (Roots &amp; Shoots)</strong><span>Aug 2021 – Now</span></div>
+              <p>Five years as part of the school's community service groups and initiatives. Together our projects have raised over 800 EUR. I've contributed around 250 hours of direct and indirect service.</p></li>
+          </ul>
+        </article>
+
+        <article class="card job a-sky">
+          <div class="job-head">
+            <h3>Team Manager &amp; Social Media</h3>
+            <span class="badge">Oct 2024 – Oct 2025</span>
+          </div>
+          <p class="meta">Restoring Rainbows · Prague · Hybrid</p>
+          <p>I helped build a new charity branch in Prague together with a co-founder. I ran the branch's social media and managed the tasks of a team of 8. The role was hybrid, so I worked both in person and online.</p>
+        </article>
+      </div>
+
+      <h2 class="section-title">Speaking &amp; debate</h2>
+      <div class="jobs">
+        <article class="card job a-sun">
+          <div class="job-head">
+            <h3>Model United Nations</h3>
+            <span class="badge">Aug 2023 – Apr 2025</span>
+          </div>
+          <p class="meta">ISPMUN</p>
+          <ul class="roles">
+            <li><div><strong>Club Member</strong><span>Aug 2023 – Apr 2025</span></div>
+              <p>Almost two years as a member of the school's Model United Nations club. I took part in two conferences, ISPMUN '23 and PORGMUN '25.</p></li>
+            <li><div><strong>Head of Admins, ISPMUN '23</strong><span>Aug – Sep 2023</span></div>
+              <p>I led the admin team at ISPMUN '23, the conference hosted by my school. I delegated tasks and organised the admins so the conference ran smoothly.</p></li>
+          </ul>
+        </article>
+
+        <article class="card job a-mauve">
+          <div class="job-head">
+            <h3>Speaker, TEDxYouth@ISPrague</h3>
+            <span class="badge">Mar – Oct 2023</span>
+          </div>
+          <p class="meta">TEDxYouth</p>
+          <p>I wrote and delivered a talk at TEDxYouth@ISPrague. It explored how social media has changed music, and the "tiktokification" of today's music landscape.</p>
+        </article>
+      </div>
+
+      <h2 class="section-title">Work &amp; sport</h2>
+      <div class="jobs">
+        <article class="card job a-sky">
+          <div class="job-head">
+            <h3>IT Intern</h3>
+            <span class="badge">Jul 2025</span>
+          </div>
+          <p class="meta">International School of Prague · Internship</p>
+          <p>I spent a month of the summer working in the school's IT office. I helped set up the online learning environment that students and teachers use during the school year.</p>
+        </article>
+
+        <article class="card job a-sun">
+          <div class="job-head">
+            <h3>Student Athlete</h3>
+            <span class="badge">Aug 2021 – Now</span>
+          </div>
+          <p class="meta">Varsity Swimming · Varsity Cross-Country</p>
+          <p>A multi-sport athlete on the varsity swimming and cross-country teams since 2021. I've competed at CEESA and SCIS tournaments, earning Sportsmanship Awards and individual medals.</p>
+        </article>
+      </div>
+
+      <div class="skills">
+        <h2 class="section-title">Toolbox</h2>
+        <ul>
+          <li>Leadership</li><li>Team Management</li><li>Project Engineering</li><li>Robotics</li><li>Mechanical Engineering</li><li>Fusion 360</li><li>Problem Solving</li><li>Creativity &amp; Innovation</li><li>Fundraising</li><li>Social Media Marketing</li><li>Public Speaking</li>
+        </ul>
+      </div>
     </section>
 
-    <footer>
-      <p>&copy; 2026 Aneta Vostra</p>
-    </footer>
+    <!-- PROJECTS -->
+    <section class="page" data-page="projects" hidden>
+      <header class="page-head">
+        <p class="eyebrow">03 / Projects</p>
+        <h1>Projects</h1>
+        <p class="lead">Robots, events, talks and the things I've built along the way.</p>
+      </header>
+      <div class="projects">
+        <a class="project-card" href="#projects/3d-imaging">
+          <div class="cover c-sun"><span>01</span></div>
+          <div class="project-card-body">
+            <h3>3D Imaging for Personal Project</h3>
+            <p>Learning Fusion 360 from scratch for my MYP 5 Personal Project.</p>
+            <ul class="tags"><li>Fusion 360</li><li>3D design</li></ul>
+            <span class="more">Take a look <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="project-card" href="#projects/first-global-2025">
+          <div class="cover c-teal"><span>02</span></div>
+          <div class="project-card-body">
+            <h3>FIRST Global Challenge 2025</h3>
+            <p>Representing Czechia in Panama with a robot built to compete against 180 countries.</p>
+            <ul class="tags"><li>Robotics</li><li>Engineering</li></ul>
+            <span class="more">Take a look <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="project-card" href="#projects/campfire-prague">
+          <div class="cover c-mauve"><span>03</span></div>
+          <div class="project-card-body">
+            <h3>Campfire Prague</h3>
+            <p>Co-organising a 48-hour game jam for teens, powered by Hack Club.</p>
+            <ul class="tags"><li>Event</li><li>Hack Club</li></ul>
+            <span class="more">Take a look <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        <a class="project-card" href="#projects/tedx-talk">
+          <div class="cover c-mix"><span>04</span></div>
+          <div class="project-card-body">
+            <h3>TEDxYouth Talk</h3>
+            <p>A talk on the “tiktokification” of music at TEDxYouth@ISPrague.</p>
+            <ul class="tags"><li>Public speaking</li><li>Music</li></ul>
+            <span class="more">Take a look <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- PROJECT 01 -->
+    <section class="page project-page" data-page="projects/3d-imaging" hidden>
+      <a class="back" href="#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="page-head">
+        <p class="eyebrow">Project 01</p>
+        <h1>3D Imaging for Personal Project</h1>
+        <p class="lead">Daily lessons and tasks in Fusion 360, with the goal of using 3D modelling in my MYP 5 Personal Project.</p>
+      </header>
+      <div class="cover cover-hero c-sun"><span>01</span></div>
+      <dl class="facts">
+        <div><dt>When</dt><dd>May 2025 – Mar 2026</dd></div>
+        <div><dt>Where</dt><dd>International School of Prague</dd></div>
+        <div><dt>Tools</dt><dd>Fusion 360</dd></div>
+        <div><dt>Type</dt><dd>MYP 5 Personal Project</dd></div>
+      </dl>
+      <div class="story">
+        <section>
+          <h2>Overview</h2>
+          <p>For my MYP 5 Personal Project I set out to learn 3D imaging properly. I worked through daily lessons and tasks in Fusion 360 and applied what I learned to the project itself.</p>
+        </section>
+      </div>
+      <a class="next" href="#projects/first-global-2025">
+        <span class="eyebrow">Next project</span>
+        <span class="next-title">FIRST Global Challenge 2025 <span aria-hidden="true">→</span></span>
+      </a>
+    </section>
+    <!-- PROJECT 02 -->
+    <section class="page project-page" data-page="projects/first-global-2025" hidden>
+      <a class="back" href="#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="page-head">
+        <p class="eyebrow">Project 02</p>
+        <h1>FIRST Global Challenge 2025</h1>
+        <p class="lead">One of the few students representing the Czech Republic at the FIRST Global Challenge in Panama City.</p>
+      </header>
+      <div class="cover cover-hero c-teal"><span>02</span></div>
+      <dl class="facts">
+        <div><dt>When</dt><dd>Jun 2025</dd></div>
+        <div><dt>Where</dt><dd>Panama City, Panama</dd></div>
+        <div><dt>Team</dt><dd>Czechia · ISP Robotics</dd></div>
+        <div><dt>Skills</dt><dd>Problem solving, robotics</dd></div>
+      </dl>
+      <div class="story">
+        <section>
+          <h2>Overview</h2>
+          <p>The FIRST Global Challenge brings together national teams from around the world. As a member of the ISP robotics team, I got to represent Czechia.</p>
+        </section>
+        <section>
+          <h2>What we did</h2>
+          <p>We engineered, built and programmed a robot to complete the challenge tasks, competing against teams from 180 other countries.</p>
+        </section>
+      </div>
+      <a class="next" href="#projects/campfire-prague">
+        <span class="eyebrow">Next project</span>
+        <span class="next-title">Campfire Prague <span aria-hidden="true">→</span></span>
+      </a>
+    </section>
+    <!-- PROJECT 03 -->
+    <section class="page project-page" data-page="projects/campfire-prague" hidden>
+      <a class="back" href="#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="page-head">
+        <p class="eyebrow">Project 03</p>
+        <h1>Campfire Prague</h1>
+        <p class="lead">A 48-hour game jam where teens from around Prague came together to make and ship games.</p>
+      </header>
+      <div class="cover cover-hero c-mauve"><span>03</span></div>
+      <dl class="facts">
+        <div><dt>When</dt><dd>Jan – Mar 2026</dd></div>
+        <div><dt>Role</dt><dd>Co-organiser</dd></div>
+        <div><dt>With</dt><dd>Hack Club</dd></div>
+        <div><dt>Format</dt><dd>48-hour game jam</dd></div>
+      </dl>
+      <div class="story">
+        <section>
+          <h2>Overview</h2>
+          <p>Campfire Prague is a coding-focused game jam for teens, powered by Hack Club, a nonprofit for teen coders and electronics makers. Participants had 48 hours to make and ship a game, with prizes, food, drinks and merch.</p>
+        </section>
+        <section>
+          <h2>My role</h2>
+          <p>As one of the co-organisers I worked on team management and leadership, helping plan and run the event.</p>
+        </section>
+      </div>
+      <a class="next" href="#projects/tedx-talk">
+        <span class="eyebrow">Next project</span>
+        <span class="next-title">TEDxYouth Talk <span aria-hidden="true">→</span></span>
+      </a>
+    </section>
+    <!-- PROJECT 04 -->
+    <section class="page project-page" data-page="projects/tedx-talk" hidden>
+      <a class="back" href="#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="page-head">
+        <p class="eyebrow">Project 04</p>
+        <h1>TEDxYouth Talk</h1>
+        <p class="lead">A talk on how social media has changed the music we listen to.</p>
+      </header>
+      <div class="cover cover-hero c-mix"><span>04</span></div>
+      <dl class="facts">
+        <div><dt>When</dt><dd>Mar – Oct 2023</dd></div>
+        <div><dt>Event</dt><dd>TEDxYouth@ISPrague</dd></div>
+        <div><dt>Role</dt><dd>Speaker</dd></div>
+        <div><dt>Topic</dt><dd>Music &amp; social media</dd></div>
+      </dl>
+      <div class="story">
+        <section>
+          <h2>Overview</h2>
+          <p>I wrote and gave a speech about how music has been affected by social media and the resulting “tiktokification” of today's music landscape.</p>
+        </section>
+      </div>
+      <a class="next" href="#projects/3d-imaging">
+        <span class="eyebrow">Next project</span>
+        <span class="next-title">3D Imaging for Personal Project <span aria-hidden="true">→</span></span>
+      </a>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Aneta Vostrá</p>
+  </footer>
 </body>
 </html>
