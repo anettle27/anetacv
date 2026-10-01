@@ -30,7 +30,6 @@ body {
   flex-direction: column;
   background:
     radial-gradient(1200px 700px at 85% -10%, color-mix(in srgb, var(--plum) 90%, transparent), transparent 70%),
-    radial-gradient(900px 600px at -10% 110%, color-mix(in srgb, var(--teal) 70%, transparent), transparent 70%),
     var(--bg);
   background-attachment: fixed;
   color: var(--text);
@@ -49,6 +48,23 @@ h1, h2, h3 {
 a { color: inherit; }
 ::selection { background: var(--sun); color: var(--plum); }
 :focus-visible { outline: 2px solid var(--sun); outline-offset: 3px; border-radius: 4px; }
+
+/* ---------- Glow that follows the cursor ---------- */
+.cursor-glow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 720px;
+  height: 720px;
+  margin: -360px 0 0 -360px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--teal) 90%, transparent), color-mix(in srgb, var(--teal) 45%, transparent) 50%, transparent);
+  pointer-events: none;
+  /* Parked in the bottom-left corner until the mouse moves */
+  transform: translate(0, 100vh);
+  will-change: transform;
+}
 
 /* ---------- Top bar ---------- */
 .topbar {
@@ -176,7 +192,7 @@ a { color: inherit; }
   transition: opacity .2s, transform .2s, visibility .2s;
 }
 .lang.open .lang-list { opacity: 1; visibility: visible; transform: none; }
-.lang-list button {
+.lang-list a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -188,19 +204,11 @@ a { color: inherit; }
   color: var(--text);
   font: 600 .95rem var(--display);
   text-align: left;
+  text-decoration: none;
   cursor: pointer;
 }
-.lang-list button:not(:disabled):hover { background: var(--surface-hover); }
-.lang-list button[aria-current="true"] { color: var(--sun); }
-.lang-list button:disabled { opacity: .5; cursor: default; }
-.lang-list small {
-  font: 600 .65rem var(--display);
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  padding: 2px 8px;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-}
+.lang-list a:hover { background: var(--surface-hover); }
+.lang-list a[aria-current="true"] { color: var(--sun); }
 
 @media (max-width: 760px) {
   .topbar { gap: 10px; }

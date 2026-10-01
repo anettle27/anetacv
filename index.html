@@ -8,10 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://aneta.vostry.org/">
+  <link rel="alternate" hreflang="cs" href="https://aneta.vostry.org/cs/">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="cursor-glow" aria-hidden="true"></div>
   <header class="topbar">
     <a href="#home" class="brand">Aneta<span class="dot">.</span></a>
 
@@ -34,8 +37,8 @@
         <span class="caret-down" aria-hidden="true"></span>
       </button>
       <ul id="lang-list" class="lang-list">
-        <li><button aria-current="true" lang="en">English</button></li>
-        <li><button disabled lang="cs">Čeština <small>brzy</small></button></li>
+        <li><a href="./" hreflang="en" lang="en" aria-current="true">English</a></li>
+        <li><a href="cs/" hreflang="cs" lang="cs">Čeština</a></li>
       </ul>
     </div>
   </header>
@@ -54,7 +57,6 @@
       </ul>
       <div class="home-links">
         <a href="https://www.linkedin.com/in/anetav/">LinkedIn</a>
-        <a href="https://github.com/anettle27">GitHub</a>
       </div>
     </section>
 
@@ -160,7 +162,7 @@
       <header class="page-head">
         <p class="eyebrow">02 / Experience</p>
         <h1>Experience</h1>
-        <p class="lead">Robotics captain, community organiser, debater and athlete. Here's what I've been up to.</p>
+        <p class="lead">Captain of my school's robotics team and of Czechia's national robotics team. Also a community organiser, debater and athlete.</p>
       </header>
 
       <h2 class="section-title">Robotics</h2>
@@ -200,18 +202,28 @@
           </ul>
         </article>
 
-        <article class="card job a-mauve">
+        <article class="card job captain">
+          <div class="captain-banner">
+            <span class="captain-star" aria-hidden="true">★</span>
+            <span>National Team Captain</span>
+            <span class="captain-since">2026</span>
+          </div>
           <div class="job-head">
-            <h3>National Team: FIRST Global Challenge</h3>
+            <h3>Team Czechia</h3>
             <span class="badge">Jun 2025 – Now</span>
           </div>
-          <p class="meta">Representing the Czech Republic</p>
-          <p>The FIRST Global Challenge is an international robotics competition where each country sends a single national team. I'm one of the few students who got to represent Czechia.</p>
+          <p class="meta">National robotics team · FIRST Global Challenge</p>
+          <p>The FIRST Global Challenge is known as the Olympics of robotics. Every year, each country sends a single national team of high school students to design, build and program a robot, then compete against the rest of the world. It is the largest youth robotics event in the world, and I am one of the five students selected to represent the Czech Republic.</p>
+          <ul class="stats">
+            <li><strong>190+</strong><span>countries compete</span></li>
+            <li><strong>1</strong><span>team per country</span></li>
+            <li><strong>2</strong><span>seasons on Team Czechia</span></li>
+          </ul>
           <ul class="roles">
-            <li><div><strong>2026 FIRST Global Challenge</strong><span>Jun 2026 – Now · Incheon, South Korea</span></div>
-              <p>Back on the national team for a second season, this time competing in Incheon, South Korea. Once again we're designing, building and programming a robot for this year's challenge.</p></li>
-            <li><div><strong>2025 FIRST Global Challenge</strong><span>Jun 2025 – Jun 2026 · Panama City, Panama</span></div>
-              <p>Our team engineered, built and programmed a robot to complete the competition's tasks. We competed against national teams from 180 other countries.</p></li>
+            <li><div><strong>Captain, 2026 FIRST Global Challenge</strong><span>Jun 2026 – Now · Incheon, South Korea</span></div>
+              <p>This year I'm the captain of Team Czechia, leading our national team at the 2026 FIRST Global Challenge in Incheon, South Korea, from 7 to 10 October. Teams from more than 190 countries will compete under the theme "Igniting Innovation", with robots built around wildfire prevention, mitigation and recovery.</p></li>
+            <li><div><strong>Team Member, 2025 FIRST Global Challenge</strong><span>Jun 2025 – Jun 2026 · Panama City, Panama</span></div>
+              <p>I was one of the few students chosen to represent Czechia at the ninth FIRST Global Challenge, held in Panama City from 29 October to 1 November 2025. Under the theme "Eco Equilibrium", focused on sustainable ecosystems, our team engineered, built and programmed a robot. We competed against 192 teams from 191 countries.</p></li>
           </ul>
         </article>
       </div>
@@ -327,7 +339,7 @@
           <div class="cover c-teal"><span>02</span></div>
           <div class="project-card-body">
             <h3>FIRST Global Challenge 2025</h3>
-            <p>Representing Czechia in Panama with a robot built to compete against 180 countries.</p>
+            <p>Representing Czechia at the Olympics of robotics, against 192 teams from 191 countries.</p>
             <ul class="tags"><li>Robotics</li><li>Engineering</li></ul>
             <span class="more">Take a look <span aria-hidden="true">→</span></span>
           </div>
@@ -385,11 +397,11 @@
       <header class="page-head">
         <p class="eyebrow">Project 02</p>
         <h1>FIRST Global Challenge 2025</h1>
-        <p class="lead">One of the few students representing the Czech Republic at the FIRST Global Challenge in Panama City.</p>
+        <p class="lead">Representing the Czech Republic at the Olympics of robotics in Panama City, against 192 teams from 191 countries.</p>
       </header>
       <div class="cover cover-hero c-teal"><span>02</span></div>
       <dl class="facts">
-        <div><dt>When</dt><dd>Jun 2025</dd></div>
+        <div><dt>When</dt><dd>29 Oct – 1 Nov 2025</dd></div>
         <div><dt>Where</dt><dd>Panama City, Panama</dd></div>
         <div><dt>Team</dt><dd>Czechia · ISP Robotics</dd></div>
         <div><dt>Skills</dt><dd>Problem solving, robotics</dd></div>
@@ -397,11 +409,15 @@
       <div class="story">
         <section>
           <h2>Overview</h2>
-          <p>The FIRST Global Challenge brings together national teams from around the world. As a member of the ISP robotics team, I got to represent Czechia.</p>
+          <p>The FIRST Global Challenge is an Olympics-style robotics competition: each country sends one national team of high school students, and the event moves to a different host country every year. As a member of the ISP robotics team, I got to represent Czechia at the ninth edition in Panama City.</p>
         </section>
         <section>
           <h2>What we did</h2>
-          <p>We engineered, built and programmed a robot to complete the challenge tasks, competing against teams from 180 other countries.</p>
+          <p>The 2025 theme was "Eco Equilibrium", focused on sustainable ecosystems. We engineered, built and programmed a robot to complete the challenge tasks, competing against 192 teams from 191 countries.</p>
+        </section>
+        <section>
+          <h2>What's next</h2>
+          <p>In 2026 I'm back on Team Czechia, this time as captain, for the FIRST Global Challenge in Incheon, South Korea.</p>
         </section>
       </div>
       <a class="next" href="#projects/campfire-prague">
