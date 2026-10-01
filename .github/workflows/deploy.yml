@@ -1,0 +1,23 @@
+# Deploys the site to Vercel (aneta.vostry.org) on every push to main.
+# Needs the repo secret VERCEL_TOKEN.
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: team_Azgu5c4vOtkqXln1sGsK9eaG
+      VERCEL_PROJECT_ID: prj_SBVLIvPfFBmKKeZI0gAY1ibOiI6P
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to production
+        run: npx --yes vercel@latest deploy --prod --yes --token="${{ secrets.VERCEL_TOKEN }}"
